@@ -7,7 +7,7 @@ description: "How to add and remove Z-Wave devices."
 
 To add (include) a non-secure Z-Wave [device](/docs/z-wave/devices/) to your system:
 
-1. Go to the [Z-Wave control panel](/docs/z-wave/control-panel/) in the Home Assistant frontend
+1. Go to the [Z-Wave control panel](/docs/z-wave/control-panel/) in the Home Assistant front end
 2. Click the **Add Node** button in the *Z-Wave Network Management* card - this will place the controller in inclusion mode
 3. Activate your device to be included by following the instructions provided with the device
 4. With the device in its final location, run a *Heal Network*
