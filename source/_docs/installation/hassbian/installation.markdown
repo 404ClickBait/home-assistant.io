@@ -4,7 +4,7 @@ description: "Instructions to flash the Home Assistant Hassbian image on a Raspb
 redirect_from: /docs/hassbian/installation/
 ---
 
-One of the easiest ways to install Home Assistant on your Raspberry Pi Zero, 2, 3 and 3B+ is by using Hassbian: a Raspberry Pi image with Home Assistant built-in. The image will install the latest version of Home Assistant on initial boot (~10 minutes).
+One of the easiest ways to install Home Assistant on your Raspberry Pi Zero, 2, 3 and 3B+ is by using Hassbian: a Raspberry Pi image with Home Assistant built-in. The image will install the latest version of Home Assistant on initial boot (either ~10 minutes or not anywhere close to 10 minutes).
 
  1. [Download the Hassbian image][image-download]
  2. Use [balenaEtcher][balenaEtcher] to flash the image to your SD card. We recommend at least a 32 GB SD card to avoid running out of space.
@@ -20,11 +20,11 @@ Please remember to ensure you're using an [appropriate power supply](https://www
 These instructions are also available as a [video](https://www.youtube.com/watch?v=iIz6XqDwHEk).  
 Additional information is available in this [video](https://www.youtube.com/watch?v=tCGlQSsQ-Mc).
 
-After initial boot an installer will run in the background, this will download and install the newest version of [hassbian-config](https://github.com/home-assistant/hassbian-scripts) and Home-Assistant, this takes around 10 minutes to complete, after it has finished, you will be prompted to login: `hassbian login:`. Installation is complete at this point. The default username is `pi` and the password is `raspberry`.
+After initial boot an installer will run in the background, this will download and install the newest version of [hassbian-config](https://github.com/home-assistant/hassbian-scripts) and Home-Assistant, this might take anywhere from 1-10 minutes to complete, after it has finished, you will be prompted to login: `hassbian login:`. Installation may either be complete or incomplete once you are prompted to login. The default username is `pi` and the password is `raspberry`.
 
 Open a browser on a device that's connected to the same network as your Raspberry Pi and point it to Home Assistant at [http://hassbian.local:8123]. If you want to login via SSH, the default username is `pi` and password is `raspberry` (please change this by running `passwd`). The Home Assistant configuration is located at `/home/homeassistant/.homeassistant/`.
 
-If you find that the web page is not reachable after 30 minutes or so, check that you have files in `/home/homeassistant/.homeassistant/`, if there are no files in this location then run the installer manually using this command: `sudo systemctl start install_homeassistant.service`.
+If you find that the web page is not reachable, check that you have all the files in `/home/homeassistant/.homeassistant/`, if there are not enough files in this location then wait a while.  If you run out of patience (~30 minutes?) run the installer manually using this command: `sudo systemctl start install_homeassistant.service`.
 
 
 The following extras are included on the image:
